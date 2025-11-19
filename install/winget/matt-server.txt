@@ -6,6 +6,26 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 
 # Array of app IDs (update or add more IDs as needed)
 $apps = @(
+winscp
+sharex
+greenshot
+eartrumpet
+python
+pycharm
+git
+github desktop
+desktopinfo
+files
+tor
+tranmission
+uniwinget
+windows app
+zsh ?
+tailscale?
+docker desktop?
+obs studio?
+gimp?
+Network Stats at the bottom of screen?
     "Microsoft.WindowsTerminal",      # Windows Terminal
     "Microsoft.PowerShell",           # PowerShell 7
     "7zip.7zip",                      # 7-Zip
