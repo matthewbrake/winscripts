@@ -1,0 +1,46 @@
+# Elevate if needed
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)) {
+    Write-Host "Script requires elevation. Rerun as Administrator."
+    exit
+}
+
+# Array of app IDs (update or add more IDs as needed)
+$apps = @(
+    "Microsoft.WindowsTerminal",      # Windows Terminal
+    "Microsoft.PowerShell",           # PowerShell 7
+    "7zip.7zip",                      # 7-Zip
+    "FluxSoftware.F.lux",             # f.lux
+    "Cloudflare.CloudflareWARP",      # Cloudflare WARP
+    "BleachBit.BleachBit",            # BleachBit
+    "Google.ChromeRemoteDesktopHost", # Google Remote Desktop
+    "Parsec.Parsec",                  # Parsec
+    "Rclone.RcloneBrowser",           # Rclone GUI
+    "Ookla.Speedtest",                # Internet Speed Test
+    "Microsoft.sysinternals",         # Sysinternals Suite
+    "YairA.Files",                    # Files
+    "Microsoft.PCManager",            # PC Manager
+    "Microsoft.PowerToys",            # PowerToys
+    "KLCP.k-litecodecpackfull",       # K-Lite Codec Pack Full
+    "VideoLAN.VLC",                   # VLC
+    "MPC-HC.MPC-HC",                  # Media Player Classic
+    "PuTTY.PuTTY",                    # PuTTY
+    "Notepad++.Notepad++",            # Notepad++
+    "FileZilla.FileZilla",            # FileZilla
+    "Opera.Opera",                    # Opera Browser
+    "Mozilla.Firefox",                # Firefox
+    "Microsoft.Edge",                 # Edge
+    "Google.Chrome",                  # Chrome
+    "Microsoft.VisualStudioCode",     # VSCode
+    "VMware.WorkstationPlayer",       # VMware Player
+    "MobaXterm.MobaXterm",            # MobaXterm
+    "ShareX.ShareX",                  # ShareX
+    "Tailscale.Tailscale",            # Tailscale
+    "Rufus.Rufus",                    # Rufus
+    "Adobe.Acrobat.Reader.64-bit"     # Adobe Acrobat Reader DC
+    # Add more as needed, see notes below
+)
+
+foreach ($app in $apps) {
+    Write-Host "Installing $app..."
+    winget install --id $app --accept-package-agreements --accept-source-agreements -e
+}
