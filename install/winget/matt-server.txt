@@ -3,7 +3,51 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     Write-Host "Script requires elevation. Rerun as Administrator."
     exit
 }
-
+winget install --id=Parsec.Parsec -e && 
+winget install --id=Parsec.ParsecVDD -e && 
+winget install --id=Parsec.ParsecVUD -e && 
+winget install --id=CodecGuide.K-LiteCodecPack.Full -e && 
+winget install --id=voidtools.Everything.Lite -e && 
+winget install --id=Sharpened.FileViewerLite -e && 
+winget install --id=zhongyang219.TrafficMonitor.Lite -e && 
+winget install --id=AIMP.AIMP -e && 
+winget install --id=VideoLAN.VLC -e && 
+winget install --id=RealVNC.VNCServer -e && 
+winget install --id=RealVNC.VNCViewer -e && 
+winget install --id=Terminals.Terminals -e && 
+winget install --id=Zoom.Zoom -e && 
+winget install --id=Discord.Discord -e && 
+winget install --id=Greenshot.Greenshot -e && 
+winget install --id=OBSProject.OBSStudio -e && 
+winget install --id=flux.flux -e && 
+winget install --id=Microsoft.Azure.StorageExplorer -e && 
+winget install --id=Microsoft.AzureCLI -e && 
+winget install --id=Rclone.Rclone -e && 
+winget install --id=Mobatek.MobaXterm -e && 
+winget install --id=Google.GoogleDrive -e && 
+winget install --id=RcloneUI.RcloneUI -e && 
+winget install --id=niklasrast.mdmsync -e && 
+winget install --id=c0re100.qBittorrent-Enhanced-Edition -e && 
+winget install --id=Adobe.Acrobat.Reader.64-bit -e && 
+winget install --id=Hibbiki.Chromium -e && 
+winget install --id=Symless.Synergy -e && 
+winget install --id=XnSoft.XnView.Classic -e && 
+winget install --id=IrfanSkiljan.IrfanView -e && 
+winget install --id=XnSoft.XnViewMP -e && 
+winget install --id=flick9000.WinScript -e && 
+winget install --id=P-StSoftware.WinSSHTerm -e && 
+winget install --id=NetSetMan.NetSetMan -e && 
+winget install --id=Timthreetwelve.WUView -e && 
+winget install --id=SimonKnuth.Scanner -e && 
+winget install --id=MoheshwarAmarnathBiswas.UsefulToolsForWindows -e && 
+winget install --id=AndyFul.ConfigureDefender -e && 
+winget install --id=srwi.EverythingToolbar.Deskband -e && 
+winget install --id=Microsoft.WindowsApp -e && 
+winget install --id=Tweaking.WindowsRepair -e && 
+winget install --id=Microsoft.UpdateAssistant -e && 
+winget install --id=Microsoft.WindowsJournal -e && 
+winget install --id=MiTeC.WindowsFileAnalyzer -e && 
+winget install --id=WSUSOfflineUpdate.CommunityEdition -e
 # Array of app IDs (update or add more IDs as needed)
 $apps = @(
 winscp
